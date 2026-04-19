@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Chenmin Sun</title>
+  <meta name="description" content="Research page of Chenmin Sun." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* =========================
+       本页专用样式：Research
+       背景图与 index.html 保持一致
+       ========================= */
+
+    :root {
+      --paper-bg: rgba(255, 255, 255, 0.86);
+      --paper-border: rgba(0, 0, 0, 0.08);
+      --text-main: #202020;
+      --text-muted: #4b4b4b;
+      --section-title: #222;
+      --line-soft: rgba(0, 0, 0, 0.08);
+      --link-color: #1f3d5a;
+    }
+
+    body {
+      background-color: #f7f6f2;
+      color: var(--text-main);
+    }
+
+    /* 整页背景图 */
+    .research-bg {
+      min-height: calc(100vh - 88px);
+      padding: 3.25rem 0 4rem;
+      background-image:
+        linear-gradient(rgba(248, 247, 243, 0.62), rgba(248, 247, 243, 0.72)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/%E6%BA%AA%E5%B1%B1%E6%B8%85%E8%BF%9C%E5%9B%BE.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    /* 正文主面板 */
+    .research-panel {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: var(--paper-bg);
+      border: 1px solid var(--paper-border);
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(4px);
+      padding: 2.2rem 2rem 2.4rem;
+    }
+
+    /* 一级分区标题，例如：
+       Microlocal analysis, Control for Partial Differential Equations */
+    .research-block-title {
+      font-size: 1.34rem;
+      line-height: 1.45;
+      margin: 0 0 0.8rem 0;
+      color: var(--section-title);
+      font-weight: 600;
+    }
+
+    /* 二级分区标题，例如：
+       Propagation of singularities, Controllability/Observability... */
+    .research-subtitle {
+      font-size: 1.04rem;
+      line-height: 1.7;
+      color: var(--text-main);
+      margin: 0 0 1rem 0;
+      font-weight: 500;
+    }
+
+    .research-divider {
+      border: none;
+      border-top: 1px solid var(--line-soft);
+      margin: 1.9rem 0 1.65rem 0;
+    }
+
+    /* 手工编号列表：这样可以完全控制编号显示形式 */
+    .pub-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .pub-item {
+      margin: 0 0 0.8rem 0;
+      line-height: 1.82;
+      font-size: 0.99rem;
+      color: var(--text-main);
+    }
+
+    .pub-item .num {
+      font-weight: 600;
+      margin-right: 0.32rem;
+    }
+
+    .pub-item a,
+    .thesis-line a,
+    .overview-line a,
+    .pdf-placeholder a {
+      color: var(--link-color);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(31, 61, 90, 0.24);
+    }
+
+    .pub-item a:hover,
+    .thesis-line a:hover,
+    .overview-line a:hover,
+    .pdf-placeholder a:hover {
+      border-bottom-color: rgba(31, 61, 90, 0.58);
+    }
+
+    .remark {
+      margin: -0.15rem 0 0.9rem 1.65rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.78;
+    }
+
+    .thesis-line,
+    .overview-line {
+      margin: 0.8rem 0 0 0;
+      line-height: 1.8;
+      font-size: 0.99rem;
+    }
+
+    .other-writing-title {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: var(--section-title);
+      margin: 0 0 1rem 0;
+      font-weight: 500;
+    }
+
+    /* Other writings 这里按你的要求只留骨架 */
+    .pdf-placeholder {
+      margin: 0 0 0.9rem 0;
+      line-height: 1.8;
+      font-size: 0.99rem;
+    }
+
+    .pdf-note {
+      margin-top: 1rem;
+      padding: 0.9rem 1rem;
+      border-left: 3px solid rgba(31, 61, 90, 0.18);
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.78;
+    }
+
+    @media (max-width: 860px) {
+      .research-bg {
+        padding: 2rem 0 2.6rem;
+        background-position: center top;
+      }
+
+      .research-panel {
+        padding: 1.4rem 1rem 1.8rem;
+        border-radius: 12px;
+      }
+
+      .research-block-title {
+        font-size: 1.18rem;
+      }
+
+      .research-subtitle,
+      .other-writing-title {
+        font-size: 1rem;
+      }
+
+      .pub-item,
+      .remark,
+      .thesis-line,
+      .overview-line,
+      .pdf-placeholder {
+        font-size: 0.96rem;
+      }
+
+      .remark {
+        margin-left: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="index.html">Chenmin Sun</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <a href="index.html">About</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="blog/index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="research-bg">
+    <div class="container">
+      <section class="research-panel">
+
+        <!-- 第一大部分 -->
+        <h2 class="research-block-title">
+          Microlocal analysis, Control for Partial Differential Equations
+        </h2>
+
+        <p class="research-subtitle">
+          Propagation of singularities, Controllability/Observability, Stabilisation for wave and dispersive equations :
+        </p>
+
+        <div class="pub-list">
+
+          <p class="pub-item">
+            <span class="num">1.</span>
+            Geometric condition for observability of electromagnetic Schr&quot;odinger operators,
+            with K. Le Balc'h and J. Niu,
+            submitted,
+            <a href="https://arxiv.org/abs/2506.24049" target="_blank" rel="noopener noreferrer">[arXiv]</a>.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">2.</span>
+            Quantitative observability for one-dimensional Schr&quot;odinger equations with potentials,
+            with Pei Su and Xu Yuan,
+            J. Funct. Analysis (2025),
+            <a href="https://www.sciencedirect.com/journal/journal-of-functional-analysis/vol/288/issue/2" target="_blank" rel="noopener noreferrer">Vol.288, 2</a>,
+            <a href="https://arxiv.org/abs/2309.00963" target="_blank" rel="noopener noreferrer">[arXiv]</a>.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">3.</span>
+            Sharp resolvent estimate for the Baouendi-Grushin operator and applications,
+            [with V. Arnaiz],
+            Comm. Math. Phys. 400 (2023), no. 1, 541–637.
+            <a href="https://arxiv.org/abs/2201.08189" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+            <a href="https://mycore.core-cloud.net/index.php/s/0SmpglJ69li5fS9" target="_blank" rel="noopener noreferrer">Slide</a>
+          </p>
+
+          <p class="remark">
+            Remark: This work contains the detailed construction and propagation of semiclassical microlocal measures in the subelliptic regime for quasimodes of the Baouendi-Grushin operator.
+          </p>
+
+          <p class="pub-item">
+  <span class="num">4.</span>
+  Sharp decay rate for the damped wave equations with convex-shaped damping,
+  Int. Math. Res. Not. IMRN (2023), no. 7, 5905–5973.
+  <a href="https://arxiv.org/abs/2106.11782" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+  <a href="assets/files/slides/ResolventGrushin.pdf" target="_blank" rel="noopener noreferrer">Slide</a>
+</p>
+
+          <p class="pub-item">
+            <span class="num">5.</span>
+            Decays rates for Kelvin-Voigt damped wave equations II: the geometric control condition,
+            [with N. Burq],
+            Proc. Amer. Math. Soc. 150 (2022), 1021-1039,
+            <a href="https://arxiv.org/abs/2010.05614" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">6.</span>
+            Decays for Kelvin-Voigt damped wave equation: Piece-wise smooth damping,
+            [with N. Burq],
+            J. London. Math. Soc.(2), 106 (2022), no. 1, 446-483.
+            <a href="https://arxiv.org/abs/2007.12994" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">7.</span>
+            Time-optimal controllability and observability for Grushin Schrödinger equation,
+            [with N. Burq],
+            Analysis &amp; PDE, Vol. 15 (2022), No. 6, 1487-1530.
+            <a href="https://arxiv.org/abs/1910.03691" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">8.</span>
+            Observability of Bouendi-Grushin type equations through resolvent estimates,
+            [with C. Letrouit],
+            J. Inst. Math. Jussieu. 22, No. 2, 541-579 (2023),
+            <a href="https://arxiv.org/abs/2010.05540" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">9.</span>
+            Semi-classical propagation of singularities for Stokes system,
+            Comm. Partial Differential Equations, 45:8, 970-1030,
+            <a href="https://arxiv.org/abs/1710.07996" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">10.</span>
+            On the stabilization of a hyperbolic Stokes system under geometric control condition.
+            [with F.-W. -Chaves-Silva],
+            Z. Angew. Math. Phys. 71, 139 (2020).
+            <a href="https://arxiv.org/abs/1711.04301" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">11.</span>
+            Internal controllability for the Kadomtsev-Petviashvili II equation.
+            [with I. Rivas],
+            SIAM Journal on Control and Optimization 58(3):1715-1734,
+            <a href="https://arxiv.org/abs/1711.09359" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">12.</span>
+            Exact controllability of linear KP-I equation.
+            (16 pages), permanent preprint,
+            <a href="https://arxiv.org/abs/1802.10491" target="_blank" rel="noopener noreferrer">[Arxiv]</a> :
+          </p>
+
+          <p class="remark">
+            Remark: This manuscript is a chapter of my PhD thesis and is a natural supplementary of the controllability for the KP-II paper. The result is truth worthy, but for some reason, I intend not to publish it in a journal.
+          </p>
+
+          <p class="thesis-line">
+            My <a href="https://tel.archives-ouvertes.fr/tel-02002152/document" target="_blank" rel="noopener noreferrer">PhD thesis</a>
+          </p>
+        </div>
+
+        <hr class="research-divider" />
+
+        <!-- 第二大部分 -->
+        <h2 class="research-block-title">
+          Analysis for Nonlinear partial differential equations.
+        </h2>
+
+        <p class="research-subtitle">
+          Nonlinear dispersive equations with randomness:
+        </p>
+
+        <div class="pub-list">
+
+          <p class="pub-item">
+            <span class="num">1.</span>
+            Almost sure global nonlinear smoothing for the 2D NLS,
+            [with N. Tzvetkov],
+            <a href="https://arxiv.org/abs/2512.13088" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">2.</span>
+            Probabilistic well-posedeness for the nonlinear Schrödinger equation on the 2d sphere I: positive regularities,
+            [with N. Burq, N. Camps, N. Tzvetkov],
+            <a href="https://arxiv.org/abs/2404.18229" target="_blank" rel="noopener noreferrer">arXiv</a>.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">3.</span>
+            The Second Picard iteration of NLS on the 2d sphere does not regularize Gaussian random initial data,
+            [with N. Burq, N. Camps, M. Latocca, N. Tzvetkov],
+            EMS Survey 2025, 12 (2025), no. 1, 123–154.
+            <a href="https://arxiv.org/abs/2404.18241" target="_blank" rel="noopener noreferrer">arXiv</a>.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">4.</span>
+            Quasi-invariance of Gaussian measures for the 3d energy critical nonlinear Schr&quot;odinger equations,
+            [with N. Tzvetkov],
+            Comm. Pure Appl. Math, 78 (2025), no. 12, 2305-2353.
+            <a href="https://arxiv.org/abs/2308.12758" target="_blank" rel="noopener noreferrer">arXiv</a>.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">5.</span>
+            Refined probabilistic well-posedness for the weakly dispersive NLS,
+            [with N. Tzvetkov],
+            Nonlinear Analysis, 213(11): 112530.,
+            <a href="https://arxiv.org/pdf/2010.13065" target="_blank" rel="noopener noreferrer">arXiv</a>.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">6.</span>
+            Gibbs measure dynamics for the fractional nonlinear Schrödinger equation,
+            [with N. Tzvetkov],
+            SIAM J. Math. Anal., 52(5), 4638–4704.
+            <a href="https://arxiv.org/abs/1912.07303" target="_blank" rel="noopener noreferrer">arxiv.org/abs/1912.07303</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">7.</span>
+            New examples of probabilistic well-posedness for nonlinear wave equations.
+            [with N. Tzvetkov],
+            J. Funct. Analysis. 278 (2020), 108322,
+            <a href="https://arxiv.org/abs/1903.04441" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">8.</span>
+            Weak universality for a class of nonlinear wave equations,
+            [with N. Tzvetkov and Weijun Xu],
+            to appear in Ann. Inst. Fourier,
+            <a href="https://arxiv.org/abs/2206.05945" target="_blank" rel="noopener noreferrer">arXiv</a>.
+          </p>
+
+          <p class="overview-line">
+            Related overview
+            <a href="https://slsedp.centre-mersenne.org/item/10.5802/slsedp.151.pdf" target="_blank" rel="noopener noreferrer">
+              Universality results for a class of nonlinear wave equations and their Gibbs measures
+            </a>,
+            Séminaire Laurent Schwartz — EDP et applications (2021-2022), Exposé no. 15, 10 p.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">9.</span>
+            Probabilistic well-posedness for supercritical wave equations with periodic boundary condition on dimension three.
+            [with B. Xia],
+            Illinois J. Math. 60(2016), no.2, 481-503
+            <a href="https://arxiv.org/abs/1508.00228" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+          </p>
+
+          <p class="research-subtitle" style="margin-top: 1.25rem;">
+            Other works on nonlinear PDEs:
+          </p>
+
+          <!-- 注意：这里按你原页面显示，前两个编号都保留成 1. -->
+          <p class="pub-item">
+            <span class="num">1.</span>
+            Hyperbolic nonlinear Schrödinger equations on R &times; T,
+            [with E. Başakoğlu, N. Tzvetkov, Yuzhao Wang],
+            special issue in Partial Diff. Equa. Appl., Vol. 6, 51 (2025)
+            <a href="https://arxiv.org/abs/2504.15836" target="_blank" rel="noopener noreferrer">preprint</a>.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">1.</span>
+            Local well-posedness for the periodic Boltzmann equation with constant collision kernel,
+            [with E. Başakoğlu, N. Tzvetkov, Yuzhao Wang],
+            to appear in J. Funct. Analysis,
+            <a href="https://arxiv.org/abs/2411.12140" target="_blank" rel="noopener noreferrer">preprint</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">3.</span>
+            On the pathological set in probabilistic well-posedness of nonlinear wave equations,
+            [with N. Tzvetkov],
+            Comptes Rendus Mathematique, Tome 358 (2020) no.9-10, pp. 989-999.
+            <a href="https://arxiv.org/abs/2001.10293" target="_blank" rel="noopener noreferrer">arxiv.org/abs/2001.10293</a>
+            <a href="https://drive.google.com/file/d/1ZdM8c7bB5rpopjLbfoQRtt4VAdk8v4p-/view?usp=sharing" target="_blank" rel="noopener noreferrer">Slide</a>
+          </p>
+
+          <p class="remark">
+            Remark: A full proof of $G_{\delta}$ dense structure of the pathological set is contained in the updated arXiv version. A better understanding of this type of strong ill-posedness is recently achieved by Camps-Gassot where they proved the result for NLS.
+          </p>
+
+          <p class="pub-item">
+            <span class="num">4.</span>
+            Low regularity blowup solutions for the mass-critical NLS in higher dimensions.
+            [with J. Zheng],
+            Journal de Mathématiques Pures et Appliquées, 134 (2020) 255-298,
+            <a href="https://arxiv.org/abs/1809.02969" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+          </p>
+
+          <p class="pub-item">
+            <span class="num">5.</span>
+            Scattering below ground state of focusing fractional nonlinear Schrödinger equation with radial data.
+            [with H. Wang, X. Yao, J. Zheng],
+            Discrete and Continuous Dynamical Systems, 2018,38(4):2207-2228
+            <a href="https://arxiv.org/abs/1702.03148" target="_blank" rel="noopener noreferrer">[Arxiv]</a>
+          </p>
+        </div>
+
+        <hr class="research-divider" />
+
+        <!-- Other writings：按你的要求只留骨架 -->
+        <h3 class="other-writing-title">
+          Other writings: expository notes, slides, ...
+        </h3>
+
+        <!--
+          使用方法说明：
+          1. 先把 PDF 文件放进你的仓库，例如：
+             assets/files/notes/your-file-name.pdf
+          2. 然后把下面 href 里的文件路径改成你的真实 PDF 路径
+          3. 标题文字改成你想显示在网页上的标题
+        -->
+
+        <p class="pdf-placeholder">
+          <span class="num">1.</span>
+          <a href="assets/files/notes/2microlocal.pdf" target="_blank" rel="noopener noreferrer">
+            Second semi-classical microlocal measure : An example of how to use 2-semi-classical microlocal measure to prove the observability for the Schr\"odinger equation on the torus.
+          </a>
+        </p>
+
+        <p class="pdf-placeholder">
+          <span class="num">2.</span>
+          <a href="assets/files/notes/Gibbsquintic.pdf" target="_blank" rel="noopener noreferrer">
+            Note on the Gibbs measure for the mass-critical focusing NLS 
+          </a>
+        </p>
+
+        <p class="pdf-placeholder">
+          <span class="num">3.</span>
+          Groupe de Travail note (organized by Francis Nier, March 2025) on the derivation of the linear Boltzmann equation from random Schrödinger equation (after Erdös-Yau):
+          <a href="assets/files/notes/linearBoltzmann-I.pdf" target="_blank" rel="noopener noreferrer">Part I</a>,
+          <a href="assets/files/notes/linearBoltzmann-II.pdf" target="_blank" rel="noopener noreferrer">Part II</a>,
+          <a href="assets/files/notes/linearBoltzmann-III.pdf" target="_blank" rel="noopener noreferrer">Part III</a>,
+          <a href="assets/files/notes/linearBoltzmann-IV.pdf" target="_blank" rel="noopener noreferrer">Part IV</a>
+        </p>
+
+        <div class="pdf-note">
+          <strong>How to add your PDF files:</strong><br />
+          Create a folder such as <code>assets/files/writings/</code> in your repository, put your PDF files there,
+          and then replace the <code>href</code> paths above with the real file names.
+          For example, if your file is <code>assets/files/writings/microlocal-note.pdf</code>, then write:<br />
+          <code>&lt;a href="assets/files/writings/microlocal-note.pdf" target="_blank"&gt;My note&lt;/a&gt;</code>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Chenmin Sun. Built with HTML/CSS and hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching and events | Chenmin Sun</title>
+  <meta name="description" content="Teaching and academic service page of Chenmin Sun." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* =========================
+       本页专用样式：Teaching
+       背景图与 index / research 保持一致
+       ========================= */
+
+    :root {
+      --panel-bg: rgba(255, 255, 255, 0.86);
+      --panel-border: rgba(0, 0, 0, 0.08);
+      --text-main: #202020;
+      --text-muted: #4b4b4b;
+      --section-title: #222;
+      --line-soft: rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+      background-color: #f7f6f2;
+      color: var(--text-main);
+    }
+
+    /* 整页背景图 */
+    .teaching-bg {
+      min-height: calc(100vh - 88px);
+      padding: 3.25rem 0 4rem;
+      background-image:
+        linear-gradient(rgba(248, 247, 243, 0.62), rgba(248, 247, 243, 0.72)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/%E6%BA%AA%E5%B1%B1%E6%B8%85%E8%BF%9C%E5%9B%BE.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    /* 正文主面板 */
+    .teaching-panel {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(4px);
+      padding: 2.2rem 2rem 2.4rem;
+    }
+
+    .section-title {
+      font-size: 1.28rem;
+      line-height: 1.5;
+      margin: 0 0 1rem 0;
+      color: var(--section-title);
+      font-weight: 600;
+    }
+
+    .teaching-list,
+    .event-list {
+      margin: 0;
+      padding-left: 1.3rem;
+    }
+
+    .teaching-list li,
+    .event-list li {
+      margin: 0 0 0.95rem 0;
+      line-height: 1.82;
+      font-size: 0.99rem;
+      color: var(--text-main);
+    }
+
+    .event-note {
+      margin-top: 0.18rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--line-soft);
+      margin: 1.9rem 0 1.65rem 0;
+    }
+
+    @media (max-width: 860px) {
+      .teaching-bg {
+        padding: 2rem 0 2.6rem;
+        background-position: center top;
+      }
+
+      .teaching-panel {
+        padding: 1.4rem 1rem 1.8rem;
+        border-radius: 12px;
+      }
+
+      .section-title {
+        font-size: 1.14rem;
+      }
+
+      .teaching-list li,
+      .event-list li,
+      .event-note {
+        font-size: 0.96rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="index.html">Chenmin Sun</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a class="active" href="teaching.html">Teaching</a>
+        <a href="blog/index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="teaching-bg">
+    <div class="container">
+      <section class="teaching-panel">
+
+        <h2 class="section-title">Recent Teaching : </h2>
+
+        <ul class="teaching-list">
+       
+
+          
+          <li>
+            The second semester of 2022-2023:
+            TD Groupes et anneaux, Math L2, Université Paris Est Créteil.
+          </li>
+
+           <li>
+            The second semester of 2025-2026:
+            CM Semiclassical analysis, Math M2, Université Gustave-Eiffel
+          </li>
+
+        </ul>
+
+        <hr class="section-divider" />
+
+        <h2 class="section-title">Some events:</h2>
+
+        <ol class="event-list">
+          <li>
+            2021 February 18-19, Colloque:
+            Analyse Harmonique et EDP à l'université d'Evry.
+            <div class="event-note">
+              (co-orgarnised with Diego Chamorro and Jiao He)
+            </div>
+          </li>
+
+          <li>
+            2023 May 5, SMAI Junior mini-workshop on Nonlinear waves and turbulence
+            <div class="event-note">
+              (co-organised with Yvonne Alama Bronsard, Nicolas Camps, Jiao He)
+            </div>
+          </li>
+
+          <li>
+            2023 Sep-, Groupe de Travail EDP (PDE seminar) at Créteil
+            <a href="https://lama-umr8050.fr/evenements/groupe_de_travail_equations_aux_derivees_partielles" target="_blank" rel="noopener noreferrer">
+             Event website
+             </a>
+            <div class="event-note">
+              (co-organised with Raphaël Danchin)
+            </div>
+          </li>
+        </ol>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Chenmin Sun. Built with HTML/CSS and hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
