@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nothing More than Tools? | Chenmin Sun</title>
+  <meta name="description" content="Nothing More than Tools? — an essay by Chenmin Sun, October 10, 2026." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../index.html">Chenmin Sun</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="site-nav">
+        <a href="../index.html" data-nav="home">About</a>
+        <a href="../research.html" data-nav="research">Research</a>
+        <a href="../teaching.html" data-nav="teaching">Teaching</a>
+        <a href="index.html" data-nav="blog">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <article class="section">
+      <div class="container narrow post-body">
+        <p class="post-meta">October 10, 2026</p>
+        <h1>Nothing More than Tools?</h1>
+        <p>I have subscribed to a commercial LLM for more than three years, at $20 per month. As a Chinese native living abroad, I used it to polish my language, to seek advice on daily life concerns, and to chat about almost anything . It was a toy, sometimes a friend who could patiently listen to me, and most of the time a shortcut tool. It entered my mathematical life at the beginning of 2025, when I could play with it in the context of university-level problem-solving, interactively learning papers from other domains in which I had little expertise. The model, accessible to me through that cheap subscription, evolved at almost a constant pace. It became my custom-made super search engine, calculator, verifier and reliable Wikipedia.</p>
+        <p>As a PDE researcher dealing with many estimates, I had always expected a real-time research assistant embedded in my workflow while editing a long paper in LaTeX. It would perfectly understand the logic flow I was working on, helping me to deal with tedious case checks and basic estimates where the guiding principle is clear. At that time (even at the beginning of 2026), LLM agents were not that popular in my community, and it was difficult—at least for me—to implement the above workflow. AI for mathematics remained distant from my research. It was not yet the assistant I had hoped for.</p>
+        <p>The situation changed dramatically over the past few months. While news about AI-solved Erdős problems kept coming, the storm was getting closer to all of us. The first wave of preprints emerged on arXiv, with many AI-solved (or heavily-assisted) mid-to-high-profile problems in every domain of mathematics. It was the time of GPT-5.5, and since then we have seen GPT-5.6, Fable 5, Astra… People devised a dazzling array of ways to play with these models: first, all kinds of prompting tricks that seemed to lack intellectual depth; then workflow construction and the distillation of various skills. In early 2026, building agent tools still posed a certain barrier to entry for non-programmers. But once Codex and ChatGPT were deeply integrated, an amateur who knew nothing about mathematics or programming could, with nothing more than naive prompts, keep a model working until an oracle-like proof was spat out by the computer. So, are these agents built on frontier LLMs really nothing more than tools?</p>
+        <p>By common sense, a tool is characterized by a specific range of uses and a determinate capability—or at least by a capability that improves steadily within a predictable range. Motivated by a desire to understand the performance of a frontier commercial model, I tried one a couple of months ago. My psychological defenses kept retreating: An early version (GPT-5.5) could not solve any of the problems in a small set from my personal collection. The situation changed when GPT-5.6 arrived. To understand which “hard problems” were worth working on, I started testing several open problems in my field—fortunately without success. Later in the summer, I heard about a fancy way of working—so-called “drawing cards” for major open problems. People around me were drawing cards, and succeeding. From my perspective, this way of working is hallucinogenic. We immerse ourselves in a virtual world as commanders of a massive army, commanding well-equipped soldiers (agents) to attack day after day until they exhaust their ammunition (tokens), with only very high-level intervention. Even pure curiosity—the will to know the truth—chases us, and hallucination emerges in our minds: we must know; we will know. An invisible force catches us: well-organized prompts must be sent before leaving home, during dinner with family, and before sleep. Does any tool make us addicted like that?</p>
+        <p>The ethical consequences are even more serious. If a result is obtained through long but almost context-free prompts, whose name should appear on the paper? Opinions differ. From my perspective, authorship of a research article—as distinct from an expository article—should be reserved for those who contribute creative intellectual input. And in the case of automatic problem-solving, where the model works essentially on its own to close the loop of theorem-proving and verification, why should it be credited only as a tool?</p>
+        <p>This is no longer hypothetical. On October 6, 2026, before the community could adapt to the new paradigm at a reasonable pace, OpenAI released mathematical manuscripts grouped into 372 result families, including candidate solutions to high-profile problems across all areas of mathematics. The news came like a cluster of nuclear bombs, destroying the old landscape of mathematics, yet few survivors could foresee the new horizon.</p>
+        <p>This is the landmark event that forces me to confront an existential crisis. There is no more room for psychological retreat. I must rethink what gives meaning to my mathematical life.</p>
+        <p>Without getting involved in the controversial commentary on similar events, or in how we should act collectively, I would rather share my individual thoughts on how I want to adapt to the advance of AI in my career. Since nobody can predict the future, I should state that what I am going to discuss should not be taken as a standard or judgement I am imposing on others, and these views will steadily evolve over time.</p>
+        <p>The core is what I would call toolization. More specifically, the model is assigned a bounded range of local tasks, while humans pilot the direction at crucial nodes of the search tree. However, the definition of local tasks and the direction of the search vary from person to person, and will also evolve over time. A tricky integral at the undergraduate level is a local task for an experienced researcher who understands the mechanism behind it, but it remains a good training exercise in a master's internship project. We can take it for granted that we may outsource labor within our ability. For instance, suppose there are two scale-invariant estimates for a given integral, A and B. We applied A, while the model applied B to get a better bound. It does a nice job as a co-pilot, and we advance more quickly. In current PDE research, what is essential is the architecture and the mechanism of how things work. For example, one must conjecture a blow-up profile, construct an ansatz to close the bootstrap, design fine norms to encode linear/multilinear effects, and guess Lyapunov functionals. We pilot these directions, and suitable AI tools (not just prompting LLMs) would allow us to quickly test ideas and counterexamples, to code for numerical experiments, to use knowledge from other domains, and to carry out the dirty work.</p>
+        <p>Mathematical development is based on the compression of concepts. Just as nowadays researchers directly use theorems of Banach spaces or classical analysis without opening the black box of the proof, AI tools allow us to work on modules, compressing not only a specific theorem in the literature, but also low-to-middle levels of reasoning. Yet, unlike traditional compression, which rests on clear definitions, the compression of AI reasoning requires novel conceptualization, so that similar mechanisms can be generalized and reused. As part or even all of the reasoning is outsourced, conceptualization becomes a new kind of cognitive work for human mathematicians, increasingly decoupled from the problem-solving process.</p>
+        <p>In another direction with the same principle, an LLM is a mobile library and a custom-made teacher. Learning ideas and techniques from other fields (even outside mathematics) in which we have no expertise, digesting new results (human or AI-produced), and coding become more convenient. This way, again, it is our consciousness that decides what to understand, and how deeply to understand it.</p>
+        <p>I acknowledge that it is always difficult to get toolization right, given the continuously increasing mathematical capabilities of LLMs. In the research process, a more delicate situation arises when an LLM contributes a key idea. It leads us towards a new direction—one that turns out to be successful—that we had not previously considered. If that happens, I consider the LLM a collaborator who deserves credit. This would make me excited, because I could reach further horizons that would otherwise be difficult to find on my own, while also making me feel a sense of loss. After all, making creative contributions to the process of discovery is a principal motivation for why I do mathematics.</p>
+        <p>As a double-edged sword, long interaction with an LLM might cause reliance on it that deskills us, eroding our abilities and intuition. But I think this effect can only be evaluated a posteriori, over time. I could periodically ask myself a set of questions: Do I gain a better understanding of my subject? Am I still able to do AI-free mathematics when I am on the plane? What cognitive tasks can I safely outsource to a model? Ideally, these questions would help me maintain both intellectual growth and independence. The critical dose of AI usage depends on the person. As we now have models with a wide range of capabilities, choice and discipline become a new personal challenge.</p>
+        <p>Today, it is becoming clearer that the industrialization of mathematics is coming; nobody is sure whether it will be a golden age of discovery or a regression of civilization. It depends on the collective narrative and on individual practice. We need time to adapt to the new paradigm, to reach a certain consensus within our community, and to rebuild our confidence. The destructive impact is real, but one thing is certain: mathematics is not a closed system, and human curiosity about the universe is unbounded.</p>
+        <p class="post-signature">Chenmin Sun</p>
+        <p>October 10, 2026</p>
+        <p><a class="text-link" href="index.html">← Back to all posts</a></p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Chenmin Sun</p>
+    </div>
+  </footer>
+</body>
+</html>
