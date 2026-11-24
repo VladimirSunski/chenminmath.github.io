@@ -5,8 +5,8 @@
   "scripts": {
     "test": "node --test test/*.test.mjs",
     "test:browser": "node test/browser-smoke.mjs",
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "dev": "npx wrangler dev",
+    "deploy": "npx wrangler deploy"
   },
   "engines": { "node": ">=22.13" }
 }
