@@ -1,0 +1,31 @@
+name: Comments moderation tests
+on:
+  pull_request:
+    paths: ['comments-service/**', 'assets/js/comments*.js', 'assets/css/comments.css', 'blog/**', '.github/workflows/comments-tests.yml']
+  push:
+    paths: ['comments-service/**', 'assets/js/comments*.js', 'assets/css/comments.css', 'blog/**', '.github/workflows/comments-tests.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm test
+        working-directory: comments-service
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install --no-save --package-lock=false playwright
+        working-directory: comments-service
+      - run: npx playwright install --with-deps chromium
+        working-directory: comments-service
+      - run: npm run test:browser
+        working-directory: comments-service

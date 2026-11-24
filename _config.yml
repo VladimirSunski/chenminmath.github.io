@@ -1,0 +1,3 @@
+# The API is deployed separately to Cloudflare, not copied into the Pages site.
+exclude:
+  - comments-service
