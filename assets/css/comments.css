@@ -1,0 +1,16 @@
+.blog-comments { margin: 2rem auto 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.blog-comments[hidden], .blog-comments [hidden] { display: none !important; }
+.reader-comment { margin: 1.5rem 0; padding: 1.2rem; border: 1px solid var(--border); border-radius: 12px; }
+.reader-comment h3, .author-reply h4 { margin: 0; overflow-wrap: anywhere; }
+.comment-date { margin: .25rem 0; color: var(--muted); font-size: .9rem; }
+.comment-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.author-reply { border-left: 3px solid var(--accent); margin: 1rem 0 0; padding-left: 1rem; }
+.comment-form { margin-top: 2rem; }
+.comment-form label { display: block; margin: 1rem 0 .4rem; font-weight: 600; }
+.comment-form input, .comment-form textarea { width: 100%; padding: .7rem; font: inherit; color: inherit; background: white; border: 1px solid #8a97aa; border-radius: 8px; }
+.comment-form textarea { resize: vertical; }
+.blog-comments button { padding: .6rem 1rem; margin: .75rem .5rem .5rem 0; border: 1px solid var(--accent); border-radius: 8px; background: white; color: var(--accent); font: inherit; cursor: pointer; }
+.blog-comments button:disabled { opacity: .6; cursor: not-allowed; }
+.comment-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.blog-comments :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.comments-status { color: var(--muted); }

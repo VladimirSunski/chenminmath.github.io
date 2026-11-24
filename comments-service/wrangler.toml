@@ -1,0 +1,21 @@
+name = "chenmin-blog-comments"
+main = "worker.mjs"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[vars]
+SITE_ORIGIN = "https://vladimirsunski.github.io"
+TURNSTILE_SITE_KEY = "REPLACE_WITH_PUBLIC_SITE_KEY"
+AUTHOR_NAME = "Chenmin Sun"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "chenmin-blog-comments"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["17 * * * *"]
+
+# Set ADMIN_TOKEN and TURNSTILE_SECRET_KEY using `wrangler secret put`.
+# Never put either secret in this file or in GitHub Pages.
